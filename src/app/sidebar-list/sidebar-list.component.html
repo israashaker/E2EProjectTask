@@ -1,0 +1,37 @@
+<accordion>
+    <accordion-group>
+        <button class="btn btn-link btn-block clearfix" accordion-heading>
+            <div class="pull-left float-left">Price</div>
+            <span class="float-right pull-right"><i class="fa fa-chevron-down"></i></span>
+        </button>
+        <ng5-slider [(value)]="value" [(highValue)]="rangeSliderMaxValue" (valueChange)="getValue()"[options]="options"></ng5-slider>
+    </accordion-group>
+    <accordion-group>
+        <button class="btn btn-link btn-block clearfix" accordion-heading>
+            <div class="pull-left float-left">Star Rating</div>
+            <span class="float-right pull-right"><i class="fa fa-chevron-down"></i></span>
+        </button>
+        Star Rating
+    </accordion-group>
+    <accordion-group>
+        <button class="btn btn-link btn-block clearfix" accordion-heading>
+            <div class="pull-left float-left">Chain</div>
+            <span class="float-right pull-right"><i class="fa fa-chevron-down"></i></span>
+        </button>
+        Chain
+    </accordion-group>
+    <accordion-group>
+        <button class="btn btn-link btn-block clearfix" accordion-heading>
+            <div class="pull-left float-left">Hotel Amenities</div>
+            <span class="float-right pull-right"><i class="fa fa-chevron-down"></i></span>
+        </button>
+        Hotel Amenities
+    </accordion-group>
+    <accordion-group>
+        <button class="btn btn-link btn-block clearfix" accordion-heading>
+            <div class="pull-left float-left">Room Amenities</div>
+            <span class="float-right pull-right"><i class="fa fa-chevron-down"></i></span>
+        </button>
+        Room Amenities
+    </accordion-group>
+</accordion>

@@ -1,0 +1,39 @@
+<div class="slider">
+    <div class="overlay"> </div>
+    <div class="slider__intro container">
+        <div class="slider__info">
+            <p class="slider__header">You're new travel mate</p>
+            <p class="slider__data">book hotels & flights at the best price.</p>
+        </div>
+        <div class="slider__search-box">
+            <pre>Please Select A Date Range:</pre>
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" class="form-control mb-3" placeholder="Select A Start Date" bsDatepicker
+                            formControlName="stdate" />
+                        <pre *ngIf="myForm.value.stdate" class="code-preview">{{myForm.value.stdate | date}}</pre>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="text" class="form-control mb-3" placeholder="Select An End Date" bsDatepicker
+                            formControlName="endate" />
+                        <pre *ngIf="myForm.value.endate" class="code-preview">{{myForm.value.endate | date}} </pre>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <pre>Going To:<i class="fas fa-map-marker-alt fa-lg ml-2"></i></pre>
+                        <select class="browser-default custom-select" formControlName="selectData">
+                            <option selected>Select City To Search Hotels</option>
+                            <option *ngFor="let o of dropdownOptions" [value]="o">{{o}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-md d-block" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

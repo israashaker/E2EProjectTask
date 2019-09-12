@@ -1,0 +1,6 @@
+<div class="hotel-data__info" *ngFor="let hotelInfo of hotels">
+    <div class="row">
+        <hotel-card [hotel]="hotelInfo" class="col-lg-9"></hotel-card>
+        <hotel-details  *ngIf="noOfDays && arr" [hotel]="hotelInfo" class="col-lg-3"></hotel-details>
+    </div>
+  </div>
